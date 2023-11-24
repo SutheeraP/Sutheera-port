@@ -43,7 +43,7 @@ const Aboutsection = () => {
             <div className={labelClass}>Education</div>
             <div className="text-sm grid gap-6">
               <div className="grid md:grid-cols-4 border-l pl-2">
-                <div className="text-xs md:text-sm">2015 - 2022</div>
+                <div className="text-xs md:text-sm">2015 - 2020</div>
                 <div className="col-span-3">
                   <div>Chonkanyanukool School</div>
                   <div className="text-faded text-xs">
