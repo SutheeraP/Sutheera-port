@@ -3,6 +3,7 @@ import Herosection from './component/Herosection'
 import Navbar from './component/Navbar'
 import Aboutsection from './component/Aboutsection'
 import Kmitljourney from './component/Kmitljourney'
+import Coralcojai from './component/Coralcojai'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Herosection/>
       <Aboutsection/>
       <Kmitljourney/>
+      <Coralcojai/>
     </main>
   )
 }

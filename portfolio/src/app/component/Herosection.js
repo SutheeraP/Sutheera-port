@@ -8,8 +8,8 @@ const Herosection = () => {
     <div className="flex h-screen">
       <div className="m-auto">
         <div className="container mx-auto px-4">
-          <div>Hi I'm</div>
-          <div className="">
+          <div className="text-primary font-semibold text-lg md:mb-3">Hi I'm</div>
+          <div className="md:text-2xl font-semibold">
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
