@@ -6,7 +6,7 @@ const Aboutsection = () => {
   const personalSkill = ["Easy Learner","Creativity","Critical Thinking","Problem-Solving","Emotional Intelligence"];
   const techSkill = ["HTML","CSS","Javscript","PHP","Vue","React","NextJS","Bootstrap","TailwindCSS","Figma"];
   return (
-    <div className="container px-4 mx-auto">
+    <div className="container px-4 mx-auto pb-48">
       <div className="grid md:grid-cols-2 gap-8">
         <div className="flex flex-col gap-4">
           <div className={boxClass}>

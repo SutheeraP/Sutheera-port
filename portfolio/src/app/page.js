@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Herosection from './component/Herosection'
 import Navbar from './component/Navbar'
 import Aboutsection from './component/Aboutsection'
+import Kmitljourney from './component/Kmitljourney'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar/>
       <Herosection/>
       <Aboutsection/>
+      <Kmitljourney/>
     </main>
   )
 }

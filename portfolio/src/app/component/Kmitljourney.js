@@ -2,7 +2,9 @@ import React from 'react'
 
 const Kmitljourney = () => {
   return (
-    <div>Kmitljourney</div>
+    <div className='min-h-screen bg-slate-200 text-secondary w-full'>
+port
+    </div>
   )
 }
 

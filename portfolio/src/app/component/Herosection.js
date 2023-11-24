@@ -8,7 +8,7 @@ const Herosection = () => {
     <div className="flex h-screen">
       <div className="m-auto">
         <div className="container mx-auto px-4">
-          <div>Hi I,m</div>
+          <div>Hi I'm</div>
           <div className="">
             <TypeAnimation
               sequence={[
