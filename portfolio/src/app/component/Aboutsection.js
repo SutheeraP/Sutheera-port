@@ -53,7 +53,7 @@ const Aboutsection = () => {
               </div>
 
               <div className="grid md:grid-cols-3 border-l pl-2">
-                <div>2021 - now</div>
+                <div className="text-xs md:text-sm">2021 - now</div>
                 <div className="col-span-2">
                   <div>King Mongkut Institue of Technology Ladkrabang</div>
                   <div className="text-faded text-xs">
@@ -97,22 +97,22 @@ const Aboutsection = () => {
             <div className="text-xs flex gap-2">
               <div>
                 <Link target="_blank" href="https://github.com/SutheeraP">
-                  <Image src="/git.png" width={25} height={25} alt="Github" />
+                  <Image src="/git.svg" width={25} height={25} alt="Github" />
                 </Link>
               </div>
               <div>
                 <Link target="_blank" href="https://www.linkedin.com/in/sutheera-pitakpalin-9bb623285/">
-                  <Image src="/link.png" width={25} height={25} alt="LinkedIn" />
+                  <Image src="/link.svg" width={25} height={25} alt="LinkedIn" />
                 </Link>
               </div>
               <div>
                 <Link target="_blank" href="mailto:s.pitakpalin@email.com?subject=Just%20say%20hi">
-                  <Image src="/mail.png" width={25} height={25} alt="Email" />
+                  <Image src="/mail.svg" width={25} height={25} alt="Email" />
                 </Link>
               </div>
               <div>
                 <Link target="_blank" href="https://www.facebook.com/suthxx/">
-                  <Image src="/fb.png" width={25} height={25} alt="Facebook" />
+                  <Image src="/fb.svg" width={25} height={25} alt="Facebook" />
                 </Link>
               </div>
             </div>
