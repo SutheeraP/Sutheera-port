@@ -55,7 +55,7 @@ const Aboutsection = () => {
               <div className="grid md:grid-cols-3 border-l pl-2">
                 <div className="text-xs md:text-sm">2021 - now</div>
                 <div className="col-span-2">
-                  <div>King Mongkut Institue of Technology Ladkrabang</div>
+                  <div>King Mongkut Institute of Technology Ladkrabang</div>
                   <div className="text-faded text-xs">
                     School of Information Technology
                   </div>
