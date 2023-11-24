@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Kmitljourney = () => {
   return (
-    <div className="min-h-screen py-24 bg-slate-100 text-secondary w-full">
+    <div className="flex min-h-screen py-24 bg-slate-100 text-secondary w-full">
       <div className="m-auto">
         <div className="conatiner mx-auto px-4 md:px-24 grid md:grid-cols-2">
           <div className="mx-auto">
