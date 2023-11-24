@@ -50,7 +50,7 @@ const Aboutsection = () => {
             <div className={labelClass}>Personal Skills</div>
             <div className="text-xs flex flex-wrap gap-3">
                 {personalSkill.map((personalSkill) => (
-                    <div className="border border-faded py-1 px-3 rounded-full">{personalSkill}</div>
+                    <div key={personalSkill} className="border border-faded py-1 px-3 rounded-full">{personalSkill}</div>
                 ))}
             </div>
           </div>
@@ -58,7 +58,7 @@ const Aboutsection = () => {
             <div className={labelClass}>Technical Skills</div>
             <div className="text-xs flex flex-wrap gap-2">
                 {techSkill.map((techSkill) => (
-                    <div className="border border-faded py-1 px-3 rounded-full">{techSkill}</div>
+                    <div key={techSkill} className="border border-faded py-1 px-3 rounded-full">{techSkill}</div>
                 ))}
             </div>
           </div>
