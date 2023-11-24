@@ -106,7 +106,7 @@ const Aboutsection = () => {
                 </Link>
               </div>
               <div>
-                <Link target="_blank" href="mailto:s.pitakpalin@email.com?subject=Just%20say%20hi">
+                <Link target="_blank" href="mailto:s.pitakpalin@gmail.com?subject=Just%20say%20hi">
                   <Image src="/mail.svg" width={25} height={25} alt="Email" />
                 </Link>
               </div>
