@@ -5,6 +5,8 @@ import { SunIcon } from "@heroicons/react/24/solid";
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { CodeBracketIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import Modal from "react-responsive-modal";
+import Mymodal from "./Mymodal";
 
 const Coralcojai = () => {
   return (
@@ -35,16 +37,8 @@ const Coralcojai = () => {
               best viewed on iPads.
             </div>
             <div className="flex justify-center md:justify-start gap-4">
-              <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-primary  text-slate-100">
-                <Link href="https://www.figma.com/proto/KcDUCHGFHYCKjkQhTUfZuG/Design?type=design&node-id=106-883&t=Ha7fmCBQp9xUjWf5-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=106%3A883&show-proto-sidebar=1">
-                  <SunIcon />
-                </Link>
-              </div>
-              <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-primary  text-slate-100">
-                <Link href="https://www.figma.com/proto/KcDUCHGFHYCKjkQhTUfZuG/Design?type=design&node-id=106-883&t=Ha7fmCBQp9xUjWf5-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=106%3A883&show-proto-sidebar=1">
-                  <MoonIcon />
-                </Link>
-              </div>
+              <Mymodal icon={(<SunIcon/>)} link={'https://coralcorjai.netlify.app/landingkrabi/main/'}/>
+              <Mymodal icon={(<MoonIcon/>)} link={'https://coralcorjai.netlify.app/landingsimilan/main/'}/>
               <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-primary  text-slate-100">
                 <Link target="_blank" href="https://github.com/professorkong/SDG">
                   <CodeBracketIcon />
