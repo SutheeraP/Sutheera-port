@@ -65,6 +65,17 @@ const Aboutsection = () => {
                       <div className="text-faded text-xs">Multimedia</div>
                     </div>
                   </div>
+
+                  <div className="grid md:grid-cols-4 border-l pl-2">
+                    <div className="text-xs md:text-sm">2023 - now</div>
+                    <div className="col-span-3">
+                      <div>Ramkhamhaeng University</div>
+                      <div className="text-faded text-xs">
+                        Faculty of Humanities
+                      </div>
+                      <div className="text-faded text-xs">Bachelor of Arts Program in Western Languages (Spanish)</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,7 +112,7 @@ const Aboutsection = () => {
                   <div>
                     <Link target="_blank" href="https://github.com/SutheeraP">
                       <Image
-                        src="/git.svg"
+                        src="git.svg"
                         width={25}
                         height={25}
                         alt="Github"
@@ -114,7 +125,7 @@ const Aboutsection = () => {
                       href="https://www.linkedin.com/in/sutheera-pitakpalin-9bb623285/"
                     >
                       <Image
-                        src="/link.svg"
+                        src="link.svg"
                         width={25}
                         height={25}
                         alt="LinkedIn"
@@ -127,7 +138,7 @@ const Aboutsection = () => {
                       href="mailto:s.pitakpalin@gmail.com?subject=Just%20say%20hi"
                     >
                       <Image
-                        src="/mail.svg"
+                        src="mail.svg"
                         width={25}
                         height={25}
                         alt="Email"
@@ -140,7 +151,7 @@ const Aboutsection = () => {
                       href="https://www.facebook.com/suthxx/"
                     >
                       <Image
-                        src="/fb.svg"
+                        src="fb.svg"
                         width={25}
                         height={25}
                         alt="Facebook"
