@@ -73,7 +73,7 @@ const Aboutsection = () => {
                       <div className="text-faded text-xs">
                         Faculty of Humanities
                       </div>
-                      <div className="text-faded text-xs">Bachelor of Arts Program in Western Languages (Spanish)</div>
+                      <div className="text-faded text-xs">Western Languages (Spanish)</div>
                     </div>
                   </div>
                 </div>

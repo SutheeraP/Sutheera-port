@@ -28,9 +28,19 @@ const Kmitljourney = () => {
               commuting and transportation around the university.
             </div>
             <div className="flex justify-center md:justify-start">
-                <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-[#ff9914]  text-slate-100">
-                    <Link target="_blank" href='https://www.figma.com/proto/KcDUCHGFHYCKjkQhTUfZuG/Design?type=design&node-id=106-883&t=Ha7fmCBQp9xUjWf5-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=106%3A883&show-proto-sidebar=1'><DevicePhoneMobileIcon/></Link>
-                    </div>
+              <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-[#ff9914]  text-slate-100">
+                <Link
+                  target="_blank"
+                  href="https://www.figma.com/proto/KcDUCHGFHYCKjkQhTUfZuG/Design?type=design&node-id=106-883&t=Ha7fmCBQp9xUjWf5-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=106%3A883&show-proto-sidebar=1"
+                >
+                  <Image
+                    src="figma.svg"
+                    width={500}
+                    height={500}
+                    alt="Figma Icon"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

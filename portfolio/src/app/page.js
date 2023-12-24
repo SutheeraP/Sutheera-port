@@ -5,6 +5,7 @@ import Aboutsection from './component/Aboutsection'
 import Kmitljourney from './component/Kmitljourney'
 import Coralcojai from './component/Coralcojai'
 import Footer from './component/Footer'
+import Apex from './component/Apex'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Aboutsection/>
       <Kmitljourney/>
       <Coralcojai/>
+      <Apex/>
       <Footer/>
     </main>
   )
