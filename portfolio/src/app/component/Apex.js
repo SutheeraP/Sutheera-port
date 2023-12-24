@@ -11,10 +11,10 @@ const Apex = () => {
         <div className="conatiner mx-auto px-4 md:px-24 grid md:grid-cols-2">
           <div className="m-auto">
             <Image
-              src="/apex.png"
+              src="/Apex.png"
               width={500}
               height={500}
-              alt="Kmitl Journey Mockup"
+              alt="AHA Mockup"
             />
           </div>
           <div className="my-auto text-center md:text-left">
