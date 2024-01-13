@@ -35,8 +35,7 @@ const Aboutsection = () => {
                 <div className={labelClass}>About Me</div>
                 <div className="text-sm">
                   Hi! 👋 I'm Sutheera Pitakpalin, a third-year student at KMITL,
-                  majoring in IT with a focus on Multimedia. In my three years
-                  of studies, I've found a passion for web design and coding.
+                  majoring in IT with a focus on Multimedia. Throughout my learning journey, I've found a passion for web design and coding.
                   I'm always eager to learn new things outside the classroom. I
                   hope you like my projects, and let's explore opportunities
                   together!

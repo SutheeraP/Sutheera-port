@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="text-faded container mx-auto px-4 text-center ">
         <Link
           target="_blank"
-          href="https://drive.google.com/file/d/1bsFmDfLp_M0dSkjTMVAUXVpkKN2fSa5-/view?usp=sharing"
+          href="https://drive.google.com/file/d/1BPIbB7MtZknxa1NWZOF8229XOW0E-mQO/view?usp=sharing"
           className=" underline underline-offset-1"
         >
           <div>Download resume</div>
