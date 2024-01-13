@@ -47,14 +47,15 @@ const Apex = () => {
                   />
                 </Link>
               </div>
-              <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-secondary  text-slate-100">
-                <Link target="_blank" href="https://apexheroic.vercel.app">
-                  <GlobeAltIcon />
-                </Link>
-              </div>
+              
               <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-secondary  text-slate-100">
                 <Link target="_blank" href="https://github.com/SutheeraP/AHA_AU">
                   <CodeBracketIcon />
+                </Link>
+              </div>
+              <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-secondary  text-slate-100">
+                <Link target="_blank" href="https://apexheroic.vercel.app">
+                  <GlobeAltIcon />
                 </Link>
               </div>
             </div>
