@@ -6,6 +6,7 @@ import Kmitljourney from './component/Kmitljourney'
 import Coralcojai from './component/Coralcojai'
 import Footer from './component/Footer'
 import Apex from './component/Apex'
+import DuckyLucky from './component/DuckyLucky'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Kmitljourney/>
       <Coralcojai/>
       <Apex/>
+      <DuckyLucky/>
       <Footer/>
     </main>
   )

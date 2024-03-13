@@ -34,75 +34,12 @@ const Aboutsection = () => {
               <div className={boxClass}>
                 <div className={labelClass}>About Me</div>
                 <div className="text-sm">
-                  Hi! 👋 I'm Sutheera Pitakpalin, a third-year student at KMITL,
-                  majoring in IT with a focus on Multimedia. Throughout my learning journey, I've found a passion for web design and coding.
-                  I'm always eager to learn new things outside the classroom. I
-                  hope you like my projects, and let's explore opportunities
+                  Hi! 👋 I'm Sutheera Pitakpalin, a student at KMITL, majoring
+                  in IT with a focus on Multimedia. Throughout my learning
+                  journey, I've found a passion for web design and coding. I'm
+                  always eager to learn new things outside the classroom. I hope
+                  you like my projects, and let's explore opportunities
                   together!
-                </div>
-              </div>
-              <div className={boxClass}>
-                <div className={labelClass}>Education</div>
-                <div className="text-sm grid gap-6">
-                  <div className="grid md:grid-cols-4 border-l pl-2">
-                    <div className="text-xs md:text-sm">2015 - 2020</div>
-                    <div className="col-span-3">
-                      <div>Chonkanyanukool School</div>
-                      <div className="text-faded text-xs">
-                        English-French Program
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-4 border-l pl-2">
-                    <div className="text-xs md:text-sm">2021 - now</div>
-                    <div className="col-span-3">
-                      <div>King Mongkut Institute of Technology Ladkrabang</div>
-                      <div className="text-faded text-xs">
-                        School of Information Technology
-                      </div>
-                      <div className="text-faded text-xs">Multimedia</div>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-4 border-l pl-2">
-                    <div className="text-xs md:text-sm">2023 - now</div>
-                    <div className="col-span-3">
-                      <div>Ramkhamhaeng University</div>
-                      <div className="text-faded text-xs">
-                        Faculty of Humanities
-                      </div>
-                      <div className="text-faded text-xs">Western Languages (Spanish)</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className={boxClass}>
-                <div className={labelClass}>Personal Skills</div>
-                <div className="text-xs flex flex-wrap gap-3">
-                  {personalSkill.map((personalSkill) => (
-                    <div
-                      key={personalSkill}
-                      className="border border-faded py-1 px-3 rounded-full"
-                    >
-                      {personalSkill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className={boxClass}>
-                <div className={labelClass}>Technical Skills</div>
-                <div className="text-xs flex flex-wrap gap-2">
-                  {techSkill.map((techSkill) => (
-                    <div
-                      key={techSkill}
-                      className="border border-faded py-1 px-3 rounded-full"
-                    >
-                      {techSkill}
-                    </div>
-                  ))}
                 </div>
               </div>
               <div className={boxClass}>
@@ -159,6 +96,73 @@ const Aboutsection = () => {
                   </div>
                 </div>
               </div>
+              {/* <div className={boxClass}>
+                <div className={labelClass}>Education</div>
+                <div className="text-sm grid gap-6">
+                  <div className="grid md:grid-cols-4 border-l pl-2">
+                    <div className="text-xs md:text-sm">2015 - 2020</div>
+                    <div className="col-span-3">
+                      <div>Chonkanyanukool School</div>
+                      <div className="text-faded text-xs">
+                        English-French Program
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-4 border-l pl-2">
+                    <div className="text-xs md:text-sm">2021 - now</div>
+                    <div className="col-span-3">
+                      <div>King Mongkut Institute of Technology Ladkrabang</div>
+                      <div className="text-faded text-xs">
+                        School of Information Technology
+                      </div>
+                      <div className="text-faded text-xs">Multimedia</div>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-4 border-l pl-2">
+                    <div className="text-xs md:text-sm">2023 - now</div>
+                    <div className="col-span-3">
+                      <div>Ramkhamhaeng University</div>
+                      <div className="text-faded text-xs">
+                        Faculty of Humanities
+                      </div>
+                      <div className="text-faded text-xs">
+                        Western Languages (Spanish)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className={boxClass}>
+                <div className={labelClass}>Personal Skills</div>
+                <div className="text-xs flex flex-wrap gap-3">
+                  {personalSkill.map((personalSkill) => (
+                    <div
+                      key={personalSkill}
+                      className="border border-faded py-1 px-3 rounded-full"
+                    >
+                      {personalSkill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className={boxClass}>
+                <div className={labelClass}>Technical Skills</div>
+                <div className="text-xs flex flex-wrap gap-2">
+                  {techSkill.map((techSkill) => (
+                    <div
+                      key={techSkill}
+                      className="border border-faded py-1 px-3 rounded-full"
+                    >
+                      {techSkill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
