@@ -26,11 +26,10 @@ const Mymodal = ({ icon, link }) => {
           mobile viewing.
         </div>
         <div
-          className="flex gap-2 pt-3 text-xs font-semibold
-font-semibold"
+          className="flex gap-2 pt-3 text-xs font-semibold"
         >
           <Link
-          target="_blank"
+            target="_blank"
             href={link}
             className="flex-1 text-center bg-primary py-2 rounded-lg"
           >
