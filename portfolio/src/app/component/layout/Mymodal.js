@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import Link from "next/link";
+import { LuExternalLink } from "react-icons/lu";
 
 const Mymodal = ({ icon, link }) => {
   const [open, setOpen] = useState(false);
@@ -12,14 +13,14 @@ const Mymodal = ({ icon, link }) => {
   return (
     <div>
       <button onClick={onOpenModal}>
-        <div className="w-10 h-10 p-2 mt-3 mx-autu rounded-full bg-primary  text-slate-100">
+        <div className="h-10 py-2 px-4 mt-3 rounded-full bg-primary border border-primary hover:bg-secondary transition-all text-slate-100 flex gap-2 items-center">
           {icon}
-          <Link href="/"></Link>
+          <LuExternalLink />
         </div>
       </button>
 
       <Modal open={open} onClose={onCloseModal} center>
-        <div className="pb-3 font-semibold text-primary">Before we go</div>
+        <div className="pb-3 font-semibold text-primary">Warning</div>
         <div className="text-xs">
           The website is best viewed on devices with a screen size of 11 inches
           or larger, such as an iPad or laptop, and may not be optimized for

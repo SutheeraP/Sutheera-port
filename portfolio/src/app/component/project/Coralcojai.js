@@ -44,14 +44,14 @@ const Coralcojai = () => {
             </div>
             <div className="flex justify-center md:justify-start gap-4">
               <Mymodal
-                icon={<SunIcon />}
+                icon={'Krabi'}
                 link={"https://coralcorjai.netlify.app/landingkrabi/main/"}
               />
               <Mymodal
-                icon={<MoonIcon />}
+                icon={'Similan'}
                 link={"https://coralcorjai.netlify.app/landingsimilan/main/"}
               />
-              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-primary  text-slate-100">
+              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-primary border border-primary hover:bg-secondary transition-all text-slate-100">
                 <Link
                   target="_blank"
                   href="https://github.com/professorkong/SDG"

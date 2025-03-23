@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { GlobeAltIcon, CodeBracketIcon } from "@heroicons/react/24/solid";
+import { ComputerDesktopIcon, CodeBracketIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Button from "../layout/Button";
 
@@ -34,7 +34,7 @@ const DuckyLucky = () => {
               <Button key={2} text={"Firebase Realtime Database"} />
             </div>
             <div className="flex justify-center md:justify-start gap-4">
-              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-[#ff9914]  text-slate-100">
+              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-[#ff9914] hover:bg-secondary border-[#ff9914] border transition-all text-slate-100">
                 <Link
                   target="_blank"
                   href="https://www.figma.com/proto/BAPHTQeKHM1O4x7IEUUp8P/Ducky-Lucky?type=design&node-id=1-2&t=ec6l1jEzcYTZIoJ3-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1&mode=design"
@@ -48,7 +48,7 @@ const DuckyLucky = () => {
                 </Link>
               </div>
 
-              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-[#ff9914]  text-slate-100">
+              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-[#ff9914] hover:bg-secondary border-[#ff9914] border transition-all text-slate-100">
                 <Link
                   target="_blank"
                   href="https://github.com/SutheeraP/duckylucky"
@@ -56,9 +56,9 @@ const DuckyLucky = () => {
                   <CodeBracketIcon />
                 </Link>
               </div>
-              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-[#ff9914]  text-slate-100">
+              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-[#ff9914] hover:bg-secondary border-[#ff9914] border transition-all text-slate-100">
                 <Link target="_blank" href="https://duckylucky.vercel.app">
-                  <GlobeAltIcon />
+                  <ComputerDesktopIcon />
                 </Link>
               </div>
             </div>

@@ -6,6 +6,8 @@ import Footer from "./component/section/Footer";
 import Apex from "./component/project/Apex";
 import DuckyLucky from "./component/project/DuckyLucky";
 import Mearai from "./component/project/Mearai";
+import Contact from "./component/section/Contact";
+import Project from "./component/section/Project";
 
 export default function Home() {
   return (
@@ -13,11 +15,12 @@ export default function Home() {
       <Navbar />
       <Herosection />
       <Aboutsection />
-      {/* <Kmitljourney/> */}
+      <Project/>
       <Coralcojai />
       <Apex />
       <DuckyLucky />
       <Mearai />
+      <Contact />
       <Footer />
     </main>
   );

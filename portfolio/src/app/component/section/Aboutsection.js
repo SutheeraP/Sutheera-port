@@ -11,11 +11,15 @@ const Aboutsection = () => {
           <div className="grid md:grid-cols-2 gap-24">
             <div className="flex flex-col gap-12">
               <section className="flex flex-col gap-8">
-                <div className="text-7xl font-bold text-primary flex">
+                <div className="text-5xl justify-center md:justify-start lg:text-7xl font-bold text-primary flex">
                   <div className="rotate-[0.25rad]">H</div>
-                  <div className="rotate-[-0.20rad] translate-y-5">e</div>
+                  <div className="rotate-[-0.20rad] translate-y-3 md:translate-y-5">
+                    e
+                  </div>
                   <div className="rotate-[-0.25rad]">l</div>
-                  <div className="rotate-[-0.20rad] translate-y-3">l</div>
+                  <div className="rotate-[-0.20rad] translate-y-1 md:translate-y-3">
+                    l
+                  </div>
                   <div className="rotate-[0.20rad]">o</div>
                 </div>
                 <div className="text-xs xl:text-sm text-faded">
@@ -56,11 +60,13 @@ const Aboutsection = () => {
               <div className="text-3xl font-bold text-primary">Experiences</div>
               <section className="flex flex-col gap-3">
                 <div className="flex flex-col gap-3">
-                  <div className="text-xs text-faded font-bold">
-                    Nov 2024 - Mar 2025
-                  </div>
-                  <div className="text-base font-semibold">
-                    Data Structures and Algorithms Teaching Assistant • KMITL
+                  <div>
+                    <div className="text-xs text-faded font-bold">
+                      Nov 2024 - Mar 2025
+                    </div>
+                    <div className="text-base font-semibold">
+                      Data Structures and Algorithms Teaching Assistant • KMITL
+                    </div>
                   </div>
                   <div className="text-faded text-xs xl:text-sm">
                     Delivered personalized
@@ -71,7 +77,8 @@ const Aboutsection = () => {
                     addressing inquiries. Also,
                     <span className="text-light">
                       {" "}
-                      developed a Python library </span>
+                      developed a Python library{" "}
+                    </span>
                     with interactive visualizations to enhance student
                     comprehension.
                   </div>
@@ -82,11 +89,13 @@ const Aboutsection = () => {
               </section>
               <section className="flex flex-col gap-3">
                 <div className="flex flex-col gap-3">
-                  <div className="text-xs text-faded font-bold">
-                    Jul - Oct 2024
-                  </div>
-                  <div className="text-base font-semibold">
-                    Software Engineer Intern • MOHARA
+                  <div>
+                    <div className="text-xs text-faded font-bold">
+                      Jul - Oct 2024
+                    </div>
+                    <div className="text-base font-semibold">
+                      Software Engineer Intern • MOHARA
+                    </div>
                   </div>
                   <div className="text-faded text-xs xl:text-sm">
                     Developed
