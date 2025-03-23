@@ -6,9 +6,9 @@ export default function Contact() {
   return (
     <div className="flex h-screen">
       <div className="m-auto">
-        <div className="container mx-auto px-4 flex flex-col gap-4">
+        <div className="container mx-auto px-4 flex flex-col gap-6">
           <div className="text-center">Let's connect</div>
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <div>
               <Link target="_blank" href="https://github.com/SutheeraP">
                 <Image src="git.svg" width={50} height={50} alt="Github" />
