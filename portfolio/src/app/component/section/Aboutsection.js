@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Button from "../layout/Button";
+import { LinkIcon } from "@heroicons/react/24/solid";
 
 const Aboutsection = () => {
   return (
@@ -75,10 +76,19 @@ const Aboutsection = () => {
                     algorithms,
                     <span className="text-light"> clarifying concepts</span> and
                     addressing inquiries. Also,
-                    <span className="text-light">
+                    <a
+                      className="text-primary hover:cursor-pointer"
+                      href="https://pypi.org/project/visualdsa/"
+                      target="_blank"
+                    >
                       {" "}
-                      developed a Python library{" "}
-                    </span>
+                      developed a Python library
+                      {
+                        <div className="w-4 h-4 inline-block translate-y-1">
+                          <LinkIcon />
+                        </div>
+                      }{" "}
+                    </a>
                     with interactive visualizations to enhance student
                     comprehension.
                   </div>

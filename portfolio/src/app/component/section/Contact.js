@@ -11,7 +11,7 @@ export default function Contact() {
           <div className="flex gap-6">
             <div>
               <Link target="_blank" href="https://github.com/SutheeraP">
-                <Image src="git.svg" width={50} height={50} alt="Github" />
+                <Image src="git.svg" width={40} height={40} alt="Github" />
               </Link>
             </div>
             <div>
@@ -19,7 +19,7 @@ export default function Contact() {
                 target="_blank"
                 href="https://www.linkedin.com/in/sutheera-pitakpalin-9bb623285/"
               >
-                <Image src="link.svg" width={50} height={50} alt="LinkedIn" />
+                <Image src="link.svg" width={40} height={40} alt="LinkedIn" />
               </Link>
             </div>
             <div>
@@ -27,7 +27,7 @@ export default function Contact() {
                 target="_blank"
                 href="mailto:s.pitakpalin@gmail.com?subject=Just%20say%20hi"
               >
-                <Image src="mail.svg" width={50} height={50} alt="Email" />
+                <Image src="mail.svg" width={40} height={40} alt="Email" />
               </Link>
             </div>
           </div>
