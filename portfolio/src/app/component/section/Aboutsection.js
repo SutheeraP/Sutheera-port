@@ -24,16 +24,17 @@ const Aboutsection = () => {
                   <div className="rotate-[0.20rad]">o</div>
                 </div>
                 <div className="text-xs xl:text-sm text-faded">
-                  I'm <span className="text-light">Sutheera Pitakpalin</span>, a
-                  recent graduate from KMITL with a Bachelor of Science in
+                  I'm a recent graduate from KMITL with a Bachelor of Science in
                   Information Technology (Multimedia). My
                   <span className="text-light">
                     {" "}
                     passion for web design and coding
                   </span>{" "}
                   has driven me throughout my studies, and I'm eager to continue
-                  learning and growing. I hope you like my projects, and let's
-                  explore opportunities together!
+                  learning and growing. I hope you like my projects, and{" "}
+                  <span className="text-light">
+                    let's explore opportunities together!
+                  </span>
                 </div>
               </section>
               <section className="flex flex-col gap-3">
