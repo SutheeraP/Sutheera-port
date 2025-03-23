@@ -14,7 +14,6 @@ const Mymodal = ({ icon, link }) => {
       <button onClick={onOpenModal}>
         <div className="h-10 py-2 px-4 mt-3 rounded-full bg-primary border border-primary hover:bg-secondary transition-all text-slate-100 flex gap-2 items-center">
           {icon}
-          <LuExternalLink />
         </div>
       </button>
 
