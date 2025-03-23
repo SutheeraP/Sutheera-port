@@ -50,9 +50,9 @@ const Aboutsection = () => {
                   <Button key={1} text={"INFP"} />
                   <Button key={2} text={"Movie Lover"} />
                   <Button key={3} text={"Hobby Artist"} />
-                  <Button key={4} text={"Cat Lover"} />
+                  <Button key={4} text={"Cat Person"} />
                   <Button key={5} text={"Fast Learner"} />
-                  <Button key={6} text={"Positive"} />
+                  <Button key={6} text={"Positive Thinker"} />
                 </div>
               </section>
             </div>
