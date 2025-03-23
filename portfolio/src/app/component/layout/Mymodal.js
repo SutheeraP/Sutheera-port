@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import Link from "next/link";
-import { LuExternalLink } from "react-icons/lu";
 
 const Mymodal = ({ icon, link }) => {
   const [open, setOpen] = useState(false);
