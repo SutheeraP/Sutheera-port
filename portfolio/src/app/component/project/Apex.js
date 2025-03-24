@@ -37,7 +37,7 @@ const Apex = () => {
             </div>
 
             <div className="flex justify-center md:justify-start gap-4">
-              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-secondary hover:bg-primary  text-slate-100">
+              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-secondary hover:bg-primary transition-all text-slate-100">
                 <Link
                   target="_blank"
                   href="https://www.figma.com/proto/XOt0rAtJY7xiDIIhduhQua/AHA-Project?node-id=2-589&starting-point-node-id=2%3A589&scaling=scale-down&t=TvJlZKbAvP95QKbi-1&mode=design"
@@ -50,7 +50,7 @@ const Apex = () => {
                   />
                 </Link>
               </div>
-              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-secondary hover:bg-primary  text-slate-100">
+              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-secondary hover:bg-primary transition-all  text-slate-100">
                 <Link
                   target="_blank"
                   href="https://github.com/SutheeraP/AHA_AU"
@@ -58,7 +58,7 @@ const Apex = () => {
                   <CodeBracketIcon />
                 </Link>
               </div>
-              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-secondary hover:bg-primary  text-slate-100">
+              <div className="w-10 h-10 p-2 mt-3 rounded-full bg-secondary hover:bg-primary transition-all text-slate-100">
                 <Link target="_blank" href="https://apexheroic.vercel.app">
                   <ComputerDesktopIcon />
                 </Link>

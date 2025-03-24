@@ -43,7 +43,7 @@ const Aboutsection = () => {
                   <div>Thai</div>
                   <div className="text-faded">Native</div>
                   <div>English</div>
-                  <div className="text-faded">Intermediate (TOEIC 925)</div>
+                  <div className="text-faded">Intermediate | TOEIC 925</div>
                 </div>
               </section>
               <section className="flex flex-col gap-3">
@@ -112,9 +112,10 @@ const Aboutsection = () => {
                     Developed
                     <span className="text-light"> full-stack development </span>
                     experience in diverse projects during my internship,
-                    collaborating with international teams to enhance
-                    <span className="text-light"> communication</span> and
-                    teamwork. Implemented project features by
+                    collaborating with
+                    <span className="text-light"> international teams</span> to
+                    enhance communication and teamwork. Implemented project
+                    features by
                     <span className="text-light"> quickly adapting</span> to new
                     frameworks and libraries.
                   </div>
