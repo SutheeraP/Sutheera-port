@@ -43,7 +43,7 @@ const Aboutsection = () => {
                   <div>Thai</div>
                   <div className="text-faded">Native</div>
                   <div>English</div>
-                  <div className="text-faded">Intermediate | TOEIC 925</div>
+                  <div className="text-faded">Intermediate | TOEIC 925/990</div>
                 </div>
               </section>
               <section className="flex flex-col gap-3">

@@ -10,7 +10,7 @@ export default function Mearai() {
       <div className="m-auto">
         <div className="mx-auto px-4 md:px-24 grid md:grid-cols-2">
           <div className="m-auto pb-12 md:pb-0">
-            <Image src="/mearai.png" width={400} height={400} alt="MEARAI Mockup" />
+            <Image src="/mearai.png" width={500} height={400} alt="MEARAI Mockup" />
           </div>
           <div className="my-auto text-center md:text-left flex flex-col gap-5">
             <div className="text-2xl md:text-3xl lg:text-6xl font-extrabold text-primary">
