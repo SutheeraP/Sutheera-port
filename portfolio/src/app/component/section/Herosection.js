@@ -8,7 +8,9 @@ const Herosection = () => {
     <div className="flex h-screen">
       <div className="m-auto">
         <div className="container mx-auto px-4 text-center">
-          <div className="text-primary font-semibold text-lg md:mb-3">Hi, I'm</div>
+          <div className="text-primary font-semibold text-lg md:mb-3">
+            Hi, I'm
+          </div>
           <div className="md:text-2xl font-semibold">
             <TypeAnimation
               sequence={[
@@ -16,6 +18,8 @@ const Herosection = () => {
                 "Sutheera",
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Full-Stack Developer",
+                1000,
+                "Frontend Developer",
                 1000,
               ]}
               wrapper="span"
