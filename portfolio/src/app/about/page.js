@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { elsewhere } from "@/data/site";
+import { site } from "@/data/site";
 
 export const metadata = {
   title: "About",
@@ -74,17 +74,18 @@ export default function AboutPage() {
           Get in touch
         </h2>
         <p className="text-muted">
-          The easiest way to reach me is by email. You can also find me on{" "}
-          {elsewhere
-            .filter((link) => link.label !== "Email")
-            .map((link, i, list) => (
-              <span key={link.label}>
-                {i > 0 && (i === list.length - 1 ? " or read my " : ", ")}
-                <a href={link.href} className="link">
-                  {link.label === "Résumé" ? "résumé" : link.label}
-                </a>
-              </span>
-            ))}
+          The easiest way to reach me is by{" "}
+          <a href={`mailto:${site.links.email}?subject=Just%20say%20hi`} className="link">
+            email
+          </a>
+          . You can also find me on{" "}
+          <a href={site.links.github} className="link">
+            GitHub
+          </a>{" "}
+          and{" "}
+          <a href={site.links.linkedin} className="link">
+            LinkedIn
+          </a>
           .
         </p>
       </section>

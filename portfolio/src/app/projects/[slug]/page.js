@@ -36,7 +36,17 @@ export default function ProjectPage({ params }) {
   const meta = [
     ["Context", project.context],
     ["Role", project.role],
-    ["Status", project.updated ? `${project.status} (Last updated ${project.updated})` : project.status],
+    [
+      "Status",
+      project.status && (
+        <>
+          {project.status}
+          {project.updated && (
+            <span className="ml-1.5 text-[13px] text-muted">(Last updated {project.updated})</span>
+          )}
+        </>
+      ),
+    ],
     ["Built with", project.stack?.join(", ")],
   ].filter(([, value]) => value);
 

@@ -13,7 +13,7 @@ npm run build
 
 | What | File |
 | --- | --- |
-| Name, links, résumé, email | `src/data/site.js` |
+| Name, links, email | `src/data/site.js` |
 | Projects (order = homepage order and "Next project" order) | `src/data/projects.js` |
 | Articles | `src/content/writing/` (see `index.js` for how to add one) |
 | Colours, fonts, article/prose styles | `src/app/globals.css`, `tailwind.config.js` |
