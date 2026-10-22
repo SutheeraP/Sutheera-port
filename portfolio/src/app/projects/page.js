@@ -11,8 +11,7 @@ export default function ProjectsPage() {
     <>
       <h1 className="text-lg font-medium">Projects</h1>
       <p className="mt-2 text-muted">
-        Personal, team and course projects. Each one has a page on what it does, the decisions
-        behind it and what I learned.
+        Personal, team and course projects. Click one to see more about it.
       </p>
       <div className="mt-10">
         <ProjectList projects={projects} />

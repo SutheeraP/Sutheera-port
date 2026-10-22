@@ -36,7 +36,7 @@ export default function ProjectPage({ params }) {
   const meta = [
     ["Context", project.context],
     ["Role", project.role],
-    ["Status", project.status],
+    ["Status", project.updated ? `${project.status} (Last updated ${project.updated})` : project.status],
     ["Built with", project.stack?.join(", ")],
   ].filter(([, value]) => value);
 
@@ -100,7 +100,7 @@ export default function ProjectPage({ params }) {
           </p>
         ))}
 
-        {project.features && (
+        {project.features?.length > 0 && (
           <>
             <h2>What it does</h2>
             <ul>
@@ -125,7 +125,7 @@ export default function ProjectPage({ params }) {
           </figure>
         )}
 
-        {project.decisions && (
+        {project.decisions?.length > 0 && (
           <>
             <h2>Technical decisions</h2>
             {project.decisions.map((decision) => (
@@ -141,7 +141,7 @@ export default function ProjectPage({ params }) {
           </>
         )}
 
-        {project.challenges && (
+        {project.challenges?.length > 0 && (
           <>
             <h2>Challenges and lessons</h2>
             {project.challenges.map((challenge) => (
@@ -155,7 +155,7 @@ export default function ProjectPage({ params }) {
           </>
         )}
 
-        {project.future && (
+        {project.future?.length > 0 && (
           <>
             <h2>What I'd improve next</h2>
             <ul>

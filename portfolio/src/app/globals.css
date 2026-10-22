@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 /*
-  Palette: the original near-black, grey and mint green, plus the orange from
-  Ducky Lucky as the colour of handwritten notes. Dark is the default; a light
-  "paper" version follows the visitor's system setting. Accent and note colours
-  are darkened in light mode so they keep at least 4.5:1 contrast.
+  Palette: the original near-black, grey and mint green. Handwritten notes use
+  the same green. Dark is the default; a light "paper" version follows the
+  visitor's system setting, with the green darkened to keep 4.5:1 contrast.
 */
 :root {
   color-scheme: dark;
@@ -17,7 +16,7 @@
   --line: #2a2e33;
   --underline: #4a505a;
   --accent: #46be93;
-  --note: #f2a65a;
+  --note: #46be93;
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,7 +29,7 @@
     --line: #dcdcd4;
     --underline: #b4b4aa;
     --accent: #17704f;
-    --note: #9c4a0a;
+    --note: #17704f;
   }
 }
 

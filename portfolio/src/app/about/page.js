@@ -3,32 +3,32 @@ import { elsewhere } from "@/data/site";
 
 export const metadata = {
   title: "About",
-  description: "A little about Sutheera: background, experience and how to get in touch.",
+  description: "A little about Sutheera, my experience and how to get in touch.",
 };
 
 const experience = [
   {
     role: "Teaching Assistant, Data Structures and Algorithms",
     place: "KMITL",
-    dates: "Nov 2024 – Mar 2025",
+    dates: "Nov 2024 to Mar 2025",
     body: (
       <>
-        Gave students one-to-one code reviews, helped them debug their algorithms and answered
-        questions about data structures. I also built{" "}
+        I gave students personal code reviews, helped them debug their algorithms and answered
+        their questions about data structures. I also built{" "}
         <Link href="/projects/visualdsa" className="link">visualdsa</Link>, a Python library that
-        draws those data structures so they're easier to understand.
+        draws data structures to help students understand them.
       </>
     ),
   },
   {
     role: "Software Engineer Intern",
     place: "MOHARA",
-    dates: "Jul – Oct 2024",
+    dates: "Jul to Oct 2024",
     body: (
       <>
-        Full-stack work across several projects with international teams, often picking up a new
-        framework or library to ship a feature. Along the way I used Next.js, Tailwind CSS,
-        shadcn/ui, tRPC, REST APIs, Node.js, Express, MongoDB, Clerk and FlutterFlow, and built{" "}
+        I worked on many different full stack projects with international teams, and learned new
+        frameworks and libraries quickly to build features. I used Next.js, Tailwind CSS, shadcn/ui,
+        tRPC, REST APIs, Node.js, Express, MongoDB, Clerk and FlutterFlow. I also built{" "}
         <Link href="/projects/mearai" className="link">Mearai</Link> to learn the T3 stack.
       </>
     ),
@@ -42,13 +42,11 @@ export default function AboutPage() {
 
       <div className="mt-8 space-y-4">
         <p>
-          I'm Sutheera, a full-stack developer. I graduated from KMITL with a Bachelor of Science in
-          Information Technology (Multimedia), and my interest in both web design and coding has
-          shaped most of what I build.
+          I'm Sutheera, a full stack developer. I graduated from KMITL with a Bachelor of Science in
+          Information Technology (Multimedia). I love both web design and coding, and I'm always
+          happy to keep learning.
         </p>
-        <p>
-          I speak Thai natively and English at an intermediate level (TOEIC 925/990).
-        </p>
+        <p>I speak Thai and English.</p>
       </div>
       <p className="hand mt-6 inline-block -rotate-1">hobby artist · cat person · movie lover</p>
 

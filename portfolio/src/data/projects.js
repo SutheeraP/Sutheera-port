@@ -3,26 +3,31 @@
 // project page (the last project wraps around to the first).
 //
 // Only `slug`, `title` and `summary` are required. Any other field can be left
-// out and its section simply won't render. Text wrapped in `backticks` is shown
-// as inline code.
+// out or left empty and its section simply won't render. Text wrapped in
+// `backticks` is shown as inline code.
+//
+// `decisions`, `challenges` and `future` are empty on purpose. Fill them in
+// only with things you've confirmed, and the sections appear on the page.
+//   decisions:  [{ title: "...", body: ["paragraph", "paragraph"] }]
+//   challenges: [{ title: "...", body: "paragraph" }]
+//   future:     ["idea", "idea"]
 
 export const projects = [
   {
     slug: "mearai",
     title: "Mearai",
-    summary: "A Twitter clone built on the T3 stack during my internship.",
+    summary: "A Twitter clone I built with the T3 stack during my internship.",
     note: "มีอะไร?",
     context: "Internship project at MOHARA",
     role: "Built on my own, with guidance from MOHARA's docs and mentors",
     status: "Live",
+    updated: "Mar, 2025",
     tags: ["Next.js", "tRPC", "Postgres"],
     stack: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "tRPC",
-      "Zod",
-      "Prisma",
       "Neon Postgres",
       "Clerk",
       "AWS S3",
@@ -39,85 +44,41 @@ export const projects = [
       { label: "Source", href: "https://github.com/SutheeraP/Mearai" },
     ],
     overview: [
-      "Mearai (มีอะไร, roughly “what's up?” in Thai) is a small Twitter-style app: you sign up, post short messages with up to four images, like other people's posts and search the feed.",
-      "I built it during my software engineering internship at MOHARA as a way to learn full-stack development on the T3 stack. Because the product itself is familiar, most of the work is in the layers underneath it: authentication, the database, file storage and a typed API between them.",
+      "Mearai is a Twitter clone. The name means “what's up?” in Thai.",
+      "I built it during my internship at MOHARA with the T3 stack. It was a great way to learn full stack development. I worked on it on my own and kept improving its features, with help from MOHARA's docs and mentors.",
     ],
     features: [
       {
-        title: "Accounts and profiles",
-        body: "Sign up, sign in and edit your profile. Each user has a profile page at their username that lists their posts and the posts they've liked.",
+        title: "Accounts",
+        body: "Sign up, log in, log out and edit your profile.",
       },
       {
-        title: "Posts with images",
-        body: "Create, edit and delete posts with up to four images. Removing an image while editing also removes the file from storage.",
+        title: "Posts",
+        body: "Write, read, edit and delete posts, and add images to them.",
       },
       {
-        title: "Likes and search",
-        body: "Like and unlike posts, and search posts from a dedicated search page.",
+        title: "Search",
+        body: "Search for posts.",
+      },
+      {
+        title: "Likes",
+        body: "Like and unlike posts.",
       },
     ],
-    decisions: [
-      {
-        title: "A typed API with tRPC and Zod",
-        body: [
-          "The server exposes tRPC procedures instead of hand-written REST routes. Every input is described with a Zod schema (for example, a post is `text` plus at most four image keys), so the same definition validates the request on the server and types the call on the client through React Query.",
-        ],
-      },
-      {
-        title: "Images go straight from the browser to S3",
-        body: [
-          "When a user attaches images, the server only creates presigned upload URLs, one per file, each with a random key under `images/`. The browser uploads the files directly to S3 and the post stores just the keys.",
-          "The server never has to stream image bytes, which suits serverless functions. The trade-off is that the upload and the database write are separate steps, so an upload can succeed for a post that is never saved.",
-        ],
-      },
-      {
-        title: "Clerk owns identity, Postgres owns relationships",
-        body: [
-          "Sign-in is handled by Clerk, but posts and likes need to reference users in the database. A webhook endpoint verifies Clerk's signed events with Svix and mirrors `user.created`, `user.updated` and `user.deleted` into a `User` table keyed by the Clerk ID.",
-          "Next.js middleware redirects anyone who isn't signed in to the sign-in page, except on the sign-in, sign-up and webhook routes.",
-        ],
-      },
-      {
-        title: "Serverless Postgres through Prisma",
-        body: [
-          "The database is Neon's serverless Postgres, accessed through Prisma's Neon driver adapter. The Prisma client is cached on `globalThis` in development so hot reloads don't keep opening new connections.",
-        ],
-      },
-    ],
-    challenges: [
-      {
-        title: "Users without a username",
-        body: "Test accounts created from Clerk's dashboard have a first name but no username. The webhook falls back to the first name so the `User` row can still be created.",
-      },
-      {
-        title: "Keeping storage and the database in step",
-        body: "Editing a post compares the old image keys with the new ones and deletes the removed files from S3; deleting a post removes all of its images.",
-      },
-    ],
-    future: [
-      "Every procedure checks for a signed-in user on its own. Moving that into a shared protected procedure would remove the repetition.",
-      "Likes have no unique constraint on the post and user pair, so the database itself doesn't prevent a double like.",
-      "Clean up uploaded images that never end up attached to a saved post.",
-    ],
+    decisions: [],
+    challenges: [],
+    future: [],
   },
   {
     slug: "ducky-lucky",
     title: "Ducky Lucky",
-    summary: "Online tic tac toe with a twist: cards, special slots and a turn timer.",
+    summary: "An online tic tac toe game with cards, special slots and cute graphics.",
     note: "play it with a friend",
     context: "Team project",
     status: "Live",
+    updated: "Mar, 2024",
     tags: ["Next.js", "Firebase", "TypeScript"],
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Firebase Realtime Database",
-      "Firebase Authentication",
-      "NextAuth",
-      "Figma",
-      "Vercel",
-    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase Realtime Database"],
     image: {
       src: "/duck.png",
       width: 1866,
@@ -133,58 +94,38 @@ export const projects = [
       },
     ],
     overview: [
-      "Ducky Lucky is an online, two-player tic tac toe game with extra rules on top: players draw cards with special skills, the board has special slots and events, and every turn is on a timer. It has cute, distinctive graphics to match.",
-      "We built it as a team. Making a game that two people play at the same time, in two different browsers, taught me a lot, and so did working on it together.",
+      "Ducky Lucky is an online tic tac toe game with a twist. We added cards and special slots to make it more fun, along with cute and distinctive graphics.",
+      "We made it as a team. I learned a lot of new things and my teamwork skills got much better. Give it a try and play Ducky Lucky!",
     ],
     features: [
       {
         title: "Accounts",
-        body: "Register and sign in with a username or email, pick a profile picture and change your username.",
+        body: "Log in, log out and register with a username or email. Pick a profile picture and change your username.",
+      },
+      {
+        title: "Play together",
+        body: "Play tic tac toe with another person in real time.",
       },
       {
         title: "Rooms",
-        body: "Create a room and invite someone, join an existing room, or jump into a random one.",
+        body: "Create a room, join a room, or join a random one.",
       },
       {
         title: "Cards and special events",
-        body: "On top of placing X or O, players use cards with special skills, such as blocking cards, a blindness effect or extra action points, and the board has special slots and events.",
+        body: "Take turns placing X or O, and use cards with special skills along the way.",
       },
       {
-        title: "Turn timer, scores and leaderboard",
-        body: "Each turn counts down, scores are tracked during a match and a global leaderboard ranks players. In-game tutorials explain the cards, events and rules.",
+        title: "Timer, scores and leaderboard",
+        body: "Each turn has a timer. Scores are kept during the game, and a leaderboard ranks all players.",
+      },
+      {
+        title: "Tutorials",
+        body: "Short guides in the game explain the cards, the special events and the rules.",
       },
     ],
-    decisions: [
-      {
-        title: "The database is the game state",
-        body: [
-          "There is no separate game server. Each match lives at `Matching/{roomId}` in Firebase Realtime Database, split into small nodes such as `board`, `currentTurn`, `time`, `card`, `effect`, `score` and `winner`.",
-          "Each player's browser subscribes to those nodes and re-renders when they change. A move is just a write, and both players see it as soon as Firebase pushes the update.",
-        ],
-      },
-      {
-        title: "A waiting room before the match",
-        body: [
-          "Rooms start under `waitingRoom`. When a second player joins, the room is copied into `Matching` with both players and starting scores, and the waiting entry is removed. Keeping the lobby separate makes it easy to list open rooms and pick a random one.",
-        ],
-      },
-      {
-        title: "NextAuth in front of Firebase Authentication",
-        body: [
-          "Sign-in uses a NextAuth credentials provider whose `authorize` step signs in with Firebase email and password. Firebase keeps the accounts, and NextAuth gives the Next.js app its session.",
-        ],
-      },
-    ],
-    challenges: [
-      {
-        title: "Keeping two browsers in agreement",
-        body: "Turns, card effects, the timer and the winner all have to look the same for both players, and both browsers write to the same match. Card effects, for example, are written to the match and then shown to the other player through a short-lived notification node that is removed after it has been displayed.",
-      },
-    ],
-    future: [
-      "The turn timer is counted down by writing the remaining time to the database every second. Storing a turn deadline once and letting each client count down locally would mean far fewer writes.",
-      "Game rules run in the browser. Checking moves with database rules or a server function would make the game harder to cheat.",
-    ],
+    decisions: [],
+    challenges: [],
+    future: [],
   },
   {
     slug: "visualdsa",
@@ -193,25 +134,26 @@ export const projects = [
     note: "made for a class",
     context: "Teaching assistant, Data Structures and Algorithms, KMITL",
     status: "Published on PyPI",
+    updated: "Feb, 2025",
     tags: ["Python", "Matplotlib"],
-    stack: ["Python", "Matplotlib", "PyPI"],
+    stack: ["Python", "Matplotlib"],
     links: [{ label: "PyPI", href: "https://pypi.org/project/visualdsa/" }],
     overview: [
-      "visualdsa turns the data structures students write in class into pictures. Pass it a stack, a circular queue or a singly linked list and it draws it with Matplotlib; pass it a list of numbers and it shows each step of bubble sort, selection sort or insertion sort.",
-      "I made it while working as a teaching assistant for the Data Structures and Algorithms course at KMITL, where I did code reviews and helped students debug their algorithms. The goal was to help students understand these structures by seeing them.",
+      "visualdsa draws data structures as pictures. It uses Matplotlib to show stacks, queues, linked lists and the steps of simple sorting algorithms.",
+      "I made it for the Data Structures and Algorithms course at KMITL, where I was a teaching assistant. I wanted it to help students understand these ideas more easily.",
     ],
     features: [
       {
         title: "Data structures",
-        body: "`showStack`, `showCircularQueue` (including where the front and rear pointers are) and `showSinglyLinkedList`.",
+        body: "Draw a stack, a circular queue or a singly linked list.",
       },
       {
         title: "Sorting",
-        body: "`bubbleSort`, `selectionSort` and `insertionSort` draw the array at each step of the algorithm.",
+        body: "See each step of bubble sort, selection sort and insertion sort.",
       },
     ],
     code: {
-      caption: "Visualising a student's own stack class",
+      caption: "Drawing a stack",
       language: "python",
       source: `import visualdsa as vd
 
@@ -220,36 +162,21 @@ my_stack._data = [3, 2, 1]
 
 vd.showStack(my_stack)`,
     },
-    decisions: [
-      {
-        title: "Work with the students' own classes",
-        body: [
-          "The library doesn't ship its own stack or linked list types. Instead it reads the attributes used by the classes taught in the course, such as `_data`, `_front`, `_rear`, `_head` and `_next`, so students can visualise the code they are actually writing.",
-          "The trade-off is that it depends on those naming conventions. A class that names its fields differently won't draw.",
-        ],
-      },
-    ],
-    challenges: [
-      {
-        title: "Names that say exactly what they draw",
-        body: "Early versions had `showQueue()` and `showLinkedList()`. Since the course uses a circular queue and a singly linked list, I renamed them to `showCircularQueue()` and `showSinglyLinkedList()` so the function name matches the structure.",
-      },
-      {
-        title: "Helpful output for broken input",
-        body: "A linked list's stored count can disagree with the nodes that are actually linked together, especially while a student is still debugging. The visualiser checks for that mismatch and shows a more informative warning.",
-      },
-    ],
+    decisions: [],
+    challenges: [],
+    future: [],
   },
   {
     slug: "apex-heroic-academy",
     title: "Apex Heroic Academy",
-    summary: "A world-guide website for an open art and story project set in 2099.",
+    summary: "A website for an open art and story project about a superhero school in 2099.",
     note: "designed and built by me",
     context: "Open community project",
-    role: "Designed and built the whole website",
+    role: "Built the whole website",
     status: "Live",
-    tags: ["Next.js", "Framer Motion", "Figma"],
-    stack: ["Next.js", "Tailwind CSS", "Framer Motion", "Figma"],
+    updated: "May, 2024",
+    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
+    stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
     image: {
       src: "/Apex.png",
       width: 1000,
@@ -265,41 +192,31 @@ vd.showStack(my_stack)`,
       },
     ],
     overview: [
-      "Apex Heroic Academy is an open project that invites anyone to join in through #AHA_AU on Facebook, Twitter and Instagram. The story is about a school for superheroes in the year 2099, and players create their own characters by drawing or writing, then play alongside each other.",
-      "The website is where the world is written down: its courses, species, places and rules. I designed it in Figma and built all of it.",
+      "Apex Heroic Academy is an open project. Anyone can join the adventure through #AHA_AU on Facebook, Twitter and Instagram. The story is about a school for superheroes in the year 2099. Players make their own characters by drawing or writing, and play with other players.",
+      "I built the whole website, and it helped me grow my web design and development skills. Check it out!",
     ],
     features: [
       {
-        title: "A guide to the world",
-        body: "Pages for the academy's courses (lectures, labs and clubs), its species, places, uniforms, mission, rules and team.",
+        title: "The world",
+        body: "Pages about the academy's courses, species, places, uniforms, mission, rules and team.",
       },
       {
         title: "How to join",
-        body: "A joining section with registration, terms, and guides for creators.",
+        body: "Pages for signing up, the terms, and guides for creators.",
       },
     ],
-    decisions: [
-      {
-        title: "Design first, then build",
-        body: [
-          "The whole site was designed in Figma first, then built with Next.js and Tailwind CSS, with Framer Motion for animation. Each part of the world has its own route, such as `/courses/lecture` or `/species/magic`, so every page can be linked to directly.",
-        ],
-      },
-    ],
-    challenges: [
-      {
-        title: "Being both the designer and the developer",
-        body: "Doing both halves of the work improved my web design skills in Figma and made me more confident turning a design into a working site.",
-      },
-    ],
+    decisions: [],
+    challenges: [],
+    future: [],
   },
   {
     slug: "coral-cojai",
     title: "Coral Cojai",
-    summary: "An interactive museum kiosk about caring for Thailand's seas.",
+    summary: "An interactive museum kiosk website about caring for Thailand's seas.",
     note: "best on an iPad",
     context: "Multimedia Programming course, with the School of Architecture, Art, and Design",
-    role: "One of six web developers; design students designed the site",
+    status: "Live",
+    updated: "Oct, 2023",
     tags: ["HTML", "CSS", "JavaScript"],
     stack: ["HTML", "CSS", "JavaScript"],
     image: {
@@ -309,29 +226,17 @@ vd.showStack(my_stack)`,
       alt: "Coral Cojai kiosk screens with illustrated sea scenes on an iPad.",
     },
     links: [
-      { label: "Krabi experience", href: "https://coralcorjai.netlify.app/landingkrabi/main/" },
-      { label: "Similan experience", href: "https://coralcorjai.netlify.app/landingsimilan/main/" },
+      { label: "Krabi", href: "https://coralcorjai.netlify.app/landingkrabi/main/" },
+      { label: "Similan", href: "https://coralcorjai.netlify.app/landingsimilan/main/" },
       { label: "Source", href: "https://github.com/professorkong/SDG" },
     ],
     overview: [
-      "Coral Cojai is about looking after Thailand's seas. It was made for a museum display in a kiosk format, with two experiences, one for Krabi and one for Similan, and small games along the way.",
-      "It came from a collaboration between two faculties: students from the School of Architecture, Art, and Design designed the website, and our IT team brought it to life.",
+      "Coral Cojai is a project from the Multimedia Programming course. We worked with the School of Architecture, Art, and Design. Their students designed the website, and our IT team brought it to life.",
+      "The project is about caring for Thailand's seas. It was made as a kiosk for museum displays, so it works best on an iPad. It may not look right on a phone, so try it on a screen that is 11 inches or bigger.",
     ],
-    decisions: [
-      {
-        title: "One screen size, on purpose",
-        body: [
-          "Because it runs on a kiosk, the site is built for a single 1194 × 834 viewport, the size of an iPad in landscape, rather than being responsive, so every layout is positioned for one known screen.",
-          "The trade-off is that it doesn't work well on phones, so it's best viewed on a screen of about 11 inches or larger.",
-        ],
-      },
-      {
-        title: "Plain HTML, CSS and JavaScript",
-        body: [
-          "There is no framework: pages, animations and the small games are written directly in HTML, CSS and JavaScript.",
-        ],
-      },
-    ],
+    decisions: [],
+    challenges: [],
+    future: [],
   },
 ];
 

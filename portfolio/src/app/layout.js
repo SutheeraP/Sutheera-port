@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-hand" });
 
 const description =
-  "Sutheera Pitakpalin is a full-stack developer with a multimedia background. Projects, notes and things learned along the way.";
+  "Sutheera Pitakpalin is a full stack developer who loves both web design and coding. Here are the things I've made.";
 
 export const metadata = {
   metadataBase: new URL(site.url),
