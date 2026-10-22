@@ -194,7 +194,7 @@ export default function ProjectPage({ params }) {
 
       <nav
         aria-label="Project navigation"
-        className="mt-16 flex flex-wrap items-end justify-between gap-6 border-t border-line pt-6"
+        className="mt-16 flex flex-wrap items-end justify-between gap-6"
       >
         <Link href="/projects" className="text-sm text-muted transition-colors hover:text-fg">
           ← All projects
