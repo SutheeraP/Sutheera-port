@@ -41,7 +41,7 @@ export default function Home() {
         aside="things I've built"
         more={{ href: "/projects", label: "All projects" }}
       >
-        <ProjectList projects={projects} />
+        <ProjectList projects={projects.filter((project) => project.featured)} />
       </Section>
 
       <Section

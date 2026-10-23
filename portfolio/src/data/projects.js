@@ -2,6 +2,8 @@
 // homepage, on /projects, and by the "Next project" link at the bottom of each
 // project page (the last project wraps around to the first).
 //
+// Projects with `featured: true` are also shown on the homepage.
+//
 // Only `slug`, `title` and `summary` are required. Any other field can be left
 // out or left empty and its section simply won't render. Text wrapped in
 // `backticks` is shown as inline code.
@@ -15,6 +17,7 @@
 export const projects = [
   {
     slug: "thaitober",
+    featured: true,
     title: "Thaitober",
     summary: "A 31 day drawing challenge with a Thai theme.",
     note: "draw every day in October",
@@ -138,6 +141,7 @@ export const projects = [
   },
   {
     slug: "bb-shop",
+    featured: true,
     title: "BB Shop",
     summary: "An order management system for my family's school uniform shop.",
     note: "made for mom",
@@ -290,6 +294,7 @@ export const projects = [
   },
   {
     slug: "ducky-lucky",
+    featured: true,
     title: "Ducky Lucky",
     summary: "An online tic tac toe game with cards, special slots and cute graphics.",
     note: "play it with a friend",
