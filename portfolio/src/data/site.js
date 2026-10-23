@@ -3,7 +3,7 @@
 export const site = {
   name: "Sutheera Pitakpalin",
   shortName: "Sutheera",
-  role: "Full stack developer",
+  role: "Full-Stack Developer",
   url: "https://sutheerap.vercel.app",
   links: {
     github: "https://github.com/SutheeraP",

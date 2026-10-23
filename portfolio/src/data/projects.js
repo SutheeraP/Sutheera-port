@@ -44,8 +44,8 @@ export const projects = [
       { label: "Source", href: "https://github.com/SutheeraP/Mearai" },
     ],
     overview: [
-      "Mearai is a Twitter clone. The name means “what's up?” in Thai.",
-      "I built it during my internship at MOHARA with the T3 stack. It was a great way to learn full stack development. I worked on it on my own and kept improving its features, with help from MOHARA's docs and mentors.",
+      "A Twitter clone developed during my internship at MOHARA, built using the T3 Stack. This project provided valuable experience in full-stack development, and I was responsible for independently developing and continuously improving its features, guided by MOHARA's documentation and mentorship.",
+      "The name Mearai (มีอะไร) means “what's up?” in Thai.",
     ],
     features: [
       {
@@ -94,8 +94,8 @@ export const projects = [
       },
     ],
     overview: [
-      "Ducky Lucky is an online tic tac toe game with a twist. We added cards and special slots to make it more fun, along with cute and distinctive graphics.",
-      "We made it as a team. I learned a lot of new things and my teamwork skills got much better. Give it a try and play Ducky Lucky!",
+      "Ducky Lucky was created under the theme of an online tic tac toe game with a twist. We added a system of cards and special slots for extra fun, along with cute and distinctive graphics.",
+      "I gained new knowledge and improved my teamwork skills a lot, and I hope you enjoy our work. Give it a try and play Ducky Lucky!",
     ],
     features: [
       {
@@ -192,8 +192,8 @@ vd.showStack(my_stack)`,
       },
     ],
     overview: [
-      "Apex Heroic Academy is an open project. Anyone can join the adventure through #AHA_AU on Facebook, Twitter and Instagram. The story is about a school for superheroes in the year 2099. Players make their own characters by drawing or writing, and play with other players.",
-      "I built the whole website, and it helped me grow my web design and development skills. Check it out!",
+      "Apex Heroic Academy is an open project inviting everyone to join the adventure through #AHA_AU on various platforms such as Facebook, Twitter, and Instagram. The content revolves around a school for superheroes in 2099. Players have the freedom to create their own characters through drawing or storytelling and playing with other players.",
+      "I was responsible for developing the entire website, which enhanced my web design and development skills. Check it out!",
     ],
     features: [
       {
@@ -231,8 +231,9 @@ vd.showStack(my_stack)`,
       { label: "Source", href: "https://github.com/professorkong/SDG" },
     ],
     overview: [
-      "Coral Cojai is a project from the Multimedia Programming course. We worked with the School of Architecture, Art, and Design. Their students designed the website, and our IT team brought it to life.",
-      "The project is about caring for Thailand's seas. It was made as a kiosk for museum displays, so it works best on an iPad. It may not look right on a phone, so try it on a screen that is 11 inches or bigger.",
+      "Coral Cojai is a project from the Multimedia Programming course, where we collaborated with the School of Architecture, Art, and Design. They were responsible for web design, and then the IT team brought the website to life.",
+      "Our project addresses the care of Thailand's seas, using a kiosk format for museum displays. This design ensures the website is best viewed on iPads.",
+      "The website is best viewed on devices with a screen size of 11 inches or larger, such as an iPad or laptop, and may not be optimized for mobile viewing.",
     ],
     decisions: [],
     challenges: [],

@@ -8,30 +8,42 @@ export const metadata = {
 
 const experience = [
   {
-    role: "Teaching Assistant, Data Structures and Algorithms",
+    role: "Data Structures and Algorithms Teaching Assistant",
     place: "KMITL",
-    dates: "Nov 2024 to Mar 2025",
+    dates: "Nov 2024 - Mar 2025",
     body: (
       <>
-        I gave students personal code reviews, helped them debug their algorithms and answered
-        their questions about data structures. I also built{" "}
-        <Link href="/projects/visualdsa" className="link">visualdsa</Link>, a Python library that
-        draws data structures to help students understand them.
+        Delivered personalized code review, algorithmic debugging, and guidance on data structures
+        and algorithms, clarifying concepts and addressing inquiries. Also,{" "}
+        <Link href="/projects/visualdsa" className="link">developed a Python library</Link> with
+        interactive visualizations to enhance student comprehension.
       </>
     ),
+    tags: ["Python"],
   },
   {
     role: "Software Engineer Intern",
     place: "MOHARA",
-    dates: "Jul to Oct 2024",
+    dates: "Jul - Oct 2024",
     body: (
       <>
-        I worked on many different full stack projects with international teams, and learned new
-        frameworks and libraries quickly to build features. I used Next.js, Tailwind CSS, shadcn/ui,
-        tRPC, REST APIs, Node.js, Express, MongoDB, Clerk and FlutterFlow. I also built{" "}
-        <Link href="/projects/mearai" className="link">Mearai</Link> to learn the T3 stack.
+        Developed full-stack development experience in diverse projects during my internship,
+        collaborating with international teams to enhance communication and teamwork. Implemented
+        project features by quickly adapting to new frameworks and libraries.
       </>
     ),
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "FlutterFlow",
+      "shadcn/ui",
+      "tRPC",
+      "RESTful APIs",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Clerk",
+    ],
   },
 ];
 
@@ -42,11 +54,11 @@ export default function AboutPage() {
 
       <div className="mt-8 space-y-4">
         <p>
-          I'm Sutheera, a full stack developer. I graduated from KMITL with a Bachelor of Science in
-          Information Technology (Multimedia). I love both web design and coding, and I'm always
-          happy to keep learning.
+          I graduated from KMITL with a Bachelor of Science in Information Technology (Multimedia).
+          My passion for web design and coding has driven me throughout my studies, and I'm eager
+          to continue learning and growing. I hope you like my projects, and let's explore
+          opportunities together!
         </p>
-        <p>I speak Thai and English.</p>
       </div>
       <p className="hand mt-6 inline-block -rotate-1">hobby artist · cat person · movie lover</p>
 
@@ -63,6 +75,9 @@ export default function AboutPage() {
                   {item.role} <span className="text-muted">· {item.place}</span>
                 </h3>
                 <p className="mt-1 text-muted">{item.body}</p>
+                {item.tags && (
+                  <p className="mt-2 font-mono text-[11px] text-muted">{item.tags.join(" · ")}</p>
+                )}
               </div>
             </li>
           ))}
