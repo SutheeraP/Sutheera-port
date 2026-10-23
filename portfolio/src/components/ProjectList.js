@@ -9,7 +9,7 @@ export default function ProjectList({ projects }) {
         <li key={project.slug}>
           <Link
             href={`/projects/${project.slug}`}
-            className="group grid grid-cols-[2.75rem_1fr_auto] items-center gap-4 rounded-lg px-3 py-3 transition-colors hover:bg-surface"
+            className="group grid grid-cols-[2.75rem_1fr_auto] items-start gap-4 rounded-lg px-3 py-3 transition-colors hover:bg-surface"
           >
             <Thumbnail project={project} />
             <span className="min-w-0">
@@ -23,7 +23,7 @@ export default function ProjectList({ projects }) {
             </span>
             <span
               aria-hidden="true"
-              className="text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
+              className="self-center text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
             >
               →
             </span>

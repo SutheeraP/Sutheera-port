@@ -16,6 +16,16 @@ const experience = [
         refactoring.
       </>
     ),
+    tags: [
+      "React",
+      "Kotlin",
+      "Spring",
+      "Gradle",
+      "Vitest",
+      "Playwright",
+      "Figma",
+      "Pair programming",
+    ],
   },
   {
     role: "Python Developer",
@@ -27,7 +37,7 @@ const experience = [
         data from Odoo. Also built a React website for a company pop-up event in one week.
       </>
     ),
-    tags: ["Python", "Odoo", "React", "Tailwind CSS", "LINE LIFF"],
+    tags: ["Python", "Odoo", "React", "LINE LIFF", "Lovable"],
   },
   {
     role: "Software Engineer (Part time)",
@@ -39,7 +49,7 @@ const experience = [
         payments. Worked in a small remote team and took full ownership to deliver it on time.
       </>
     ),
-    tags: ["FlutterFlow", "Firebase", "Firestore", "Cloud Functions"],
+    tags: ["FlutterFlow", "GCP", "Firebase", "Stripe"],
   },
   {
     role: "Data Structures and Algorithms Teaching Assistant",
