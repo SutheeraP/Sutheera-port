@@ -7,6 +7,17 @@ export const metadata = {
 
 const experience = [
   {
+    role: "Full-stack Engineer",
+    place: "Lionheart Pacific",
+    dates: "Nov 2025 - Now",
+    body: (
+      <>
+        Design, build and maintain full-stack applications. Practice TDD and continuous
+        refactoring.
+      </>
+    ),
+  },
+  {
     role: "Data Structures and Algorithms Teaching Assistant",
     place: "KMITL",
     dates: "Nov 2024 - Mar 2025",
