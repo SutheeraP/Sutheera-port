@@ -1,5 +1,6 @@
 import ProjectList from "@/components/ProjectList";
 import Section from "@/components/Section";
+import SocialLinks from "@/components/SocialLinks";
 import WritingList from "@/components/WritingList";
 import { articles } from "@/content/writing";
 import { projects } from "@/data/projects";
@@ -12,17 +13,12 @@ export default function Home() {
         <h1 id="intro" className="text-lg font-medium">
           {site.name}
         </h1>
-        <p className="text-muted">{site.role}</p>
-
-        <div className="mt-8 space-y-4">
-          <p>
-            Hi, I'm Sutheera. I studied IT (Multimedia) at KMITL, and I love both web design and
-            coding. Many of my projects started as Figma designs before I built them.
-          </p>
-          <p>
-            This is where I keep the things I've made, like a tic tac toe game with cards and a
-            Python library that draws linked lists.
-          </p>
+        <p className="mt-6">
+          I'm a software engineer with a passion for art and coding. This is where I keep the things
+          I've made and what I've learned.
+        </p>
+        <div className="mt-6">
+          <SocialLinks />
         </div>
       </section>
 

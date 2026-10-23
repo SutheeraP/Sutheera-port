@@ -1,6 +1,5 @@
 import { Caveat, Inter } from "next/font/google";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -8,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-hand" });
 
 const description =
-  "Sutheera Pitakpalin is a full stack developer who loves both web design and coding. Here are the things I've made.";
+  "I'm a software engineer with a passion for art and coding. This is where I keep the things I've made and what I've learned.";
 
 export const metadata = {
   metadataBase: new URL(site.url),
@@ -44,10 +43,9 @@ export default function RootLayout({ children }) {
           Skip to content
         </a>
         <Header />
-        <main id="main" className="mx-auto max-w-page px-5 pt-16 sm:pt-20">
+        <main id="main" className="mx-auto max-w-page px-5 pb-24 pt-16 sm:pt-20">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
