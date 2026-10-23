@@ -1,3 +1,129 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+  Palette: the original near-black, grey and mint green. Handwritten notes use
+  the same green. Dark is the default; a light "paper" version follows the
+  visitor's system setting, with the green darkened to keep 4.5:1 contrast.
+*/
+:root {
+  color-scheme: dark;
+  --bg: #16181a;
+  --surface: #1d2023;
+  --fg: #e3e3e3;
+  --muted: #8b93a3;
+  --line: #2a2e33;
+  --underline: #4a505a;
+  --accent: #46be93;
+  --note: #46be93;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg: #f4f4f0;
+    --surface: #eaeae4;
+    --fg: #16181a;
+    --muted: #5d6574;
+    --line: #dcdcd4;
+    --underline: #b4b4aa;
+    --accent: #17704f;
+    --note: #17704f;
+  }
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Underlined text link used inside paragraphs. */
+  .link {
+    @apply text-fg underline decoration-underline decoration-1 underline-offset-[3px] transition-colors hover:decoration-accent;
+  }
+
+  /* Small monospace label: tags, dates, metadata keys. */
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-wider text-muted;
+  }
+
+  /* Short handwritten annotation. Never used for essential information. */
+  .hand {
+    @apply font-hand text-note;
+    font-size: 1.25rem;
+    line-height: 1.1;
+  }
+
+  /* Long-form text on project and article pages. */
+  .prose {
+    @apply text-[15px] leading-[1.75];
+  }
+  .prose > * + * {
+    margin-top: 1.1em;
+  }
+  .prose h2 {
+    @apply pt-6 text-base font-medium text-fg;
+  }
+  .prose h3 {
+    @apply pt-2 font-medium text-fg;
+  }
+  .prose h2 + *,
+  .prose h3 + * {
+    margin-top: 0.5em;
+  }
+  .prose p,
+  .prose li {
+    @apply text-fg;
+  }
+  .prose a {
+    @apply text-fg underline decoration-underline underline-offset-[3px] hover:decoration-accent;
+  }
+  .prose ul {
+    @apply list-disc space-y-1 pl-5 marker:text-muted;
+  }
+  .prose ol {
+    @apply list-decimal space-y-1 pl-5 marker:text-muted;
+  }
+  .prose blockquote {
+    @apply border-l-2 border-line pl-4 text-muted;
+  }
+  .prose :not(pre) > code,
+  .inline-code {
+    @apply rounded bg-surface px-1 py-0.5 font-mono text-[0.85em];
+  }
+  .prose pre,
+  .code-block {
+    @apply overflow-x-auto rounded-lg border border-line bg-surface p-4 font-mono text-[13px] leading-relaxed;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
