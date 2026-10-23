@@ -7,6 +7,51 @@ export const metadata = {
 
 const experience = [
   {
+    role: "Full-stack Engineer",
+    place: "Lionheart Pacific",
+    dates: "Nov 2025 - Now",
+    body: (
+      <>
+        Design, build and maintain full-stack applications. Practice TDD and continuous
+        refactoring.
+      </>
+    ),
+    tags: [
+      "React",
+      "Kotlin",
+      "Spring",
+      "Gradle",
+      "Vitest",
+      "Playwright",
+      "Figma",
+      "Pair programming",
+    ],
+  },
+  {
+    role: "Python Developer",
+    place: "Duckgrammer",
+    dates: "Jun - Oct 2025",
+    body: (
+      <>
+        Built custom Odoo ERP modules in Python and a LINE LIFF app that shows real-time customer
+        data from Odoo. Also built a React website for a company pop-up event in one week.
+      </>
+    ),
+    tags: ["Python", "Odoo", "React", "LINE LIFF", "Lovable"],
+  },
+  {
+    role: "Software Engineer (Part time)",
+    place: "Pilot Projects",
+    dates: "May - Dec 2025",
+    body: (
+      <>
+        Built a job-finding platform with FlutterFlow and Google Cloud, including international
+        payments. Worked in a small remote team and took full ownership to deliver it on time.
+      </>
+    ),
+    tags: ["FlutterFlow", "GCP", "Firebase", "Stripe"],
+  },
+  {
     role: "Data Structures and Algorithms Teaching Assistant",
     place: "KMITL",
     dates: "Nov 2024 - Mar 2025",
