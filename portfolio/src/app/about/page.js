@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { site } from "@/data/site";
 
 export const metadata = {
   title: "About",
-  description: "A little about Sutheera, my experience and how to get in touch.",
+  description: "A little about Sutheera and my experience.",
 };
 
 const experience = [
@@ -82,27 +81,6 @@ export default function AboutPage() {
             </li>
           ))}
         </ol>
-      </section>
-
-      <section aria-labelledby="contact" className="mt-16">
-        <h2 id="contact" className="mb-3 text-sm font-medium">
-          Get in touch
-        </h2>
-        <p className="text-muted">
-          The easiest way to reach me is by{" "}
-          <a href={`mailto:${site.links.email}?subject=Just%20say%20hi`} className="link">
-            email
-          </a>
-          . You can also find me on{" "}
-          <a href={site.links.github} className="link">
-            GitHub
-          </a>{" "}
-          and{" "}
-          <a href={site.links.linkedin} className="link">
-            LinkedIn
-          </a>
-          .
-        </p>
       </section>
     </>
   );

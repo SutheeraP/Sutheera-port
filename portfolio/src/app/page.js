@@ -1,6 +1,5 @@
 import ProjectList from "@/components/ProjectList";
 import Section from "@/components/Section";
-import SocialLinks from "@/components/SocialLinks";
 import WritingList from "@/components/WritingList";
 import { articles } from "@/content/writing";
 import { projects } from "@/data/projects";
@@ -13,12 +12,26 @@ export default function Home() {
         <h1 id="intro" className="text-lg font-medium">
           {site.name}
         </h1>
-        <p className="mt-6">
-          I'm a software engineer with a passion for art and coding. This is where I keep the things
-          I've made and what I've learned.
-        </p>
-        <div className="mt-6">
-          <SocialLinks />
+        <div className="mt-6 space-y-4 text-muted">
+          <p>
+            I'm a <span className="text-fg">software engineer</span> with a passion for art and
+            coding. This is where I keep the things I've made and what I've learned.
+          </p>
+          <p>
+            The easiest way to reach me is by{" "}
+            <a href={`mailto:${site.links.email}?subject=Just%20say%20hi`} className="link">
+              email
+            </a>
+            . You can also find me on{" "}
+            <a href={site.links.github} className="link">
+              GitHub
+            </a>{" "}
+            and{" "}
+            <a href={site.links.linkedin} className="link">
+              LinkedIn
+            </a>
+            .
+          </p>
         </div>
       </section>
 
