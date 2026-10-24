@@ -1,10 +1,7 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,mdx}"],
   theme: {
     extend: {
-      // Colours come from CSS variables in globals.css so light and dark mode
-      // share the same class names.
       colors: {
         bg: "var(--bg)",
         bar: "var(--bar)",

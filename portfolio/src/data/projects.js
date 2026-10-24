@@ -1,19 +1,3 @@
-// Every project shown on the site. The array order is the order used on the
-// homepage, on /projects, and by the "Next project" link at the bottom of each
-// project page (the last project wraps around to the first).
-//
-// Projects with `featured: true` are also shown on the homepage.
-//
-// Only `slug`, `title` and `summary` are required. Any other field can be left
-// out or left empty and its section simply won't render. Text wrapped in
-// `backticks` is shown as inline code.
-//
-// `decisions`, `challenges` and `future` are empty on purpose. Fill them in
-// only with things you've confirmed, and the sections appear on the page.
-//   decisions:  [{ title: "...", body: ["paragraph", "paragraph"] }]
-//   challenges: [{ title: "...", body: "paragraph" }]
-//   future:     ["idea", "idea"]
-
 export const projects = [
   {
     slug: "thaitober",
@@ -470,7 +454,6 @@ export function getProject(slug) {
   return projects.find((project) => project.slug === slug);
 }
 
-// The project after `slug`, wrapping from the last project back to the first.
 export function getNextProject(slug) {
   const index = projects.findIndex((project) => project.slug === slug);
   return projects[(index + 1) % projects.length];

@@ -1,8 +1,9 @@
-// Renders a plain string, turning `backtick` spans into inline code.
+const inlineCodePattern = /(`[^`]+`)/g;
+
 export default function RichText({ children }) {
-  return children.split(/(`[^`]+`)/g).map((part, i) =>
+  return children.split(inlineCodePattern).map((part, index) =>
     part.startsWith("`") && part.endsWith("`") ? (
-      <code key={i} className="inline-code">
+      <code key={index} className="inline-code">
         {part.slice(1, -1)}
       </code>
     ) : (

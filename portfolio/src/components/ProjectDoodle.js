@@ -1,5 +1,3 @@
-// Line doodles shown as project thumbnails, keyed by project slug. Drawn on a
-// 48 by 48 grid with the current text colour so they follow light and dark mode.
 const doodles = {
   thaitober: (
     <>

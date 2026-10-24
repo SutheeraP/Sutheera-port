@@ -1,5 +1,3 @@
-// Sutheera's handwritten signature, traced from a photo. Drawn in the current
-// text colour so it follows light and dark mode.
 export default function Signature({ className }) {
   return (
     <svg viewBox="0 0 361 623" fill="currentColor" aria-hidden="true" className={className}>

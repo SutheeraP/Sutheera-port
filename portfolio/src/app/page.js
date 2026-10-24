@@ -1,4 +1,3 @@
-import PlayfulHello from "@/components/PlayfulHello";
 import ProjectList from "@/components/ProjectList";
 import Section from "@/components/Section";
 import WritingList from "@/components/WritingList";
@@ -12,7 +11,7 @@ const roles = ["Sutheera", "Software Engineer", "Artist"];
 export default function Home() {
   return (
     <>
-      <section className="hero-height -mt-16 flex flex-col items-center justify-center text-center sm:-mt-20">
+      <section className="-mt-16 flex min-h-[calc(100dvh-4rem)] flex-col items-center justify-center text-center sm:-mt-20">
         <h1 className="sr-only">Hi, I'm {site.name}, a software engineer and an artist</h1>
         <div aria-hidden="true">
           <p className="font-hand text-2xl font-bold text-accent sm:text-3xl">Hi, I'm</p>
@@ -23,7 +22,9 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="intro" className="pt-8">
-        <PlayfulHello id="intro" />
+        <h2 id="intro" className="font-hand text-3xl font-bold leading-none tracking-wider text-accent sm:text-4xl">
+          Hello
+        </h2>
         <div className="mt-4 space-y-4 text-muted">
           <p>
             I'm a <span className="text-fg">software engineer</span> with a passion for art and

@@ -1,7 +1,5 @@
 "use client";
 
-// Types each phrase out, pauses, deletes it and moves on to the next, forever.
-// Visitors who prefer reduced motion see the first phrase without animation.
 import { useEffect, useState } from "react";
 
 const TYPE_DELAY = 70;

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-  Palette: the original near-black, grey and mint green. Handwritten notes use
-  the same green. Dark is the default; a light "paper" version follows the
-  visitor's system setting, with the green darkened to keep 4.5:1 contrast.
-*/
 :root {
   color-scheme: dark;
   --bg: #16181a;
@@ -60,31 +55,20 @@
 }
 
 @layer components {
-  /* Fills the visible screen below the navbar. dvh follows mobile browser
-     toolbars; vh is the fallback for browsers without it. */
-  .hero-height {
-    min-height: calc(100vh - 4rem);
-    min-height: calc(100dvh - 4rem);
-  }
-
-  /* Underlined text link used inside paragraphs. */
   .link {
     @apply text-fg underline decoration-underline decoration-1 underline-offset-[3px] transition-colors hover:decoration-accent;
   }
 
-  /* Small monospace label: tags, dates, metadata keys. */
   .label {
     @apply font-mono text-[11px] uppercase tracking-wider text-muted;
   }
 
-  /* Short handwritten annotation. Never used for essential information. */
   .hand {
     @apply font-hand text-note;
     font-size: 1.25rem;
     line-height: 1.1;
   }
 
-  /* Long-form text on project and article pages. */
   .prose {
     @apply text-[15px] leading-[1.75];
   }

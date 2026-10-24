@@ -1,5 +1,3 @@
-// A homepage-style section: a small heading with an optional handwritten
-// aside, and an optional "see all" link on the right.
 import Link from "next/link";
 
 export default function Section({ id, title, aside, more, children }) {

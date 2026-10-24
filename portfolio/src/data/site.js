@@ -1,5 +1,3 @@
-// Personal links and details used across the site. Keep this the single
-// place to update a URL.
 export const site = {
   name: "Sutheera Pitakpalin",
   shortName: "Sutheera",
