@@ -15,7 +15,7 @@ export default function Home() {
       <section className="hero-height -mt-16 flex flex-col items-center justify-center text-center sm:-mt-20">
         <h1 className="sr-only">Hi, I'm {site.name}, a software engineer and an artist</h1>
         <div aria-hidden="true">
-          <p className="text-lg font-semibold text-accent">Hi, I'm</p>
+          <p className="font-hand text-2xl font-bold text-accent sm:text-3xl">Hi, I'm</p>
           <p className="mt-1 whitespace-nowrap text-3xl font-semibold sm:mt-3 sm:text-5xl">
             <TypingText phrases={roles} />
           </p>
