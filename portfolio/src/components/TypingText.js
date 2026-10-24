@@ -52,7 +52,7 @@ export default function TypingText({ phrases }) {
   return (
     <span>
       {phrase.slice(0, length)}
-      <span className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-[0.1em] bg-accent motion-safe:animate-blink" />
+      <span className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-[0.1em] bg-fg motion-safe:animate-blink" />
     </span>
   );
 }

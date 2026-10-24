@@ -40,11 +40,11 @@ export default function Home() {
               email
             </a>
             . You can also find me on{" "}
-            <a href={site.links.github} className="link">
+            <a href={site.links.github} target="_blank" rel="noopener noreferrer" className="link">
               GitHub
             </a>{" "}
             and{" "}
-            <a href={site.links.linkedin} className="link">
+            <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer" className="link">
               LinkedIn
             </a>
             .
