@@ -1,7 +1,8 @@
 export const site = {
   name: "Sutheera Pitakpalin",
   shortName: "Sutheera",
-  url: "https://sutheerap.vercel.app",
+  domain: "suthee.space",
+  url: "https://suthee.space",
   links: {
     github: "https://github.com/SutheeraP",
     linkedin: "https://www.linkedin.com/in/sutheera-pitakpalin-9bb623285/",

@@ -4,6 +4,7 @@ import WritingList from "@/components/WritingList";
 import { articles } from "@/content/writing";
 import { projects } from "@/data/projects";
 import TypingText from "@/components/TypingText";
+import Webring from "@/components/Webring";
 import { site } from "@/data/site";
 
 const roles = ["Sutheera", "Software Engineer", "Artist"];
@@ -22,9 +23,12 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="intro" className="pt-8">
-        <h2 id="intro" className="font-hand text-3xl font-bold leading-none tracking-wider text-accent sm:text-4xl">
-          Hello
-        </h2>
+        <div className="flex items-center gap-3 text-accent">
+          <h2 id="intro" className="font-hand text-3xl font-bold leading-none tracking-wider sm:text-4xl">
+            Hello
+          </h2>
+          <Webring domain={site.domain} className="h-7 w-7 transition-opacity hover:opacity-70 sm:h-8 sm:w-8" />
+        </div>
         <div className="mt-4 space-y-4 text-muted">
           <p>
             I'm a <span className="text-fg">software engineer</span> with a passion for art and
