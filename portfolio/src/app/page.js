@@ -12,7 +12,7 @@ const roles = ["Sutheera", "Software Engineer", "Artist"];
 export default function Home() {
   return (
     <>
-      <section className="-mt-16 flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center sm:-mt-20">
+      <section className="hero-height -mt-16 flex flex-col items-center justify-center text-center sm:-mt-20">
         <h1 className="sr-only">Hi, I'm {site.name}, a software engineer and an artist</h1>
         <div aria-hidden="true">
           <p className="font-medium text-accent">Hi, I'm</p>
@@ -24,7 +24,7 @@ export default function Home() {
 
       <section aria-labelledby="intro" className="pt-8">
         <PlayfulHello id="intro" />
-        <div className="mt-10 space-y-4 text-muted">
+        <div className="mt-4 space-y-4 text-muted">
           <p>
             I'm a <span className="text-fg">software engineer</span> with a passion for art and
             coding. This is where I keep the things I've made and what I've learned.
