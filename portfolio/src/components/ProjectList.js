@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ProjectDoodle from "@/components/ProjectDoodle";
 
-// Compact project entries: doodle, name, one sentence, a few tags.
 export default function ProjectList({ projects }) {
   return (
     <ul className="-mx-3 flex flex-col">

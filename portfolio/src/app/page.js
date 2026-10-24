@@ -3,16 +3,29 @@ import Section from "@/components/Section";
 import WritingList from "@/components/WritingList";
 import { articles } from "@/content/writing";
 import { projects } from "@/data/projects";
+import TypingText from "@/components/TypingText";
 import { site } from "@/data/site";
+
+const roles = ["Sutheera", "Software Engineer", "Artist"];
 
 export default function Home() {
   return (
     <>
-      <section aria-labelledby="intro">
-        <h1 id="intro" className="text-lg font-medium">
-          {site.name}
-        </h1>
-        <div className="mt-6 space-y-4 text-muted">
+      <section className="-mt-16 flex min-h-[calc(100dvh-4rem)] flex-col items-center justify-center text-center sm:-mt-20">
+        <h1 className="sr-only">Hi, I'm {site.name}, a software engineer and an artist</h1>
+        <div aria-hidden="true">
+          <p className="font-hand text-2xl font-bold text-accent sm:text-3xl">Hi, I'm</p>
+          <p className="mt-1 whitespace-nowrap text-3xl font-semibold sm:mt-3 sm:text-5xl">
+            <TypingText phrases={roles} />
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="intro" className="pt-8">
+        <h2 id="intro" className="font-hand text-3xl font-bold leading-none tracking-wider text-accent sm:text-4xl">
+          Hello
+        </h2>
+        <div className="mt-4 space-y-4 text-muted">
           <p>
             I'm a <span className="text-fg">software engineer</span> with a passion for art and
             coding. This is where I keep the things I've made and what I've learned.

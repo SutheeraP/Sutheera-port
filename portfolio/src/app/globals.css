@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-  Palette: the original near-black, grey and mint green. Handwritten notes use
-  the same green. Dark is the default; a light "paper" version follows the
-  visitor's system setting, with the green darkened to keep 4.5:1 contrast.
-*/
 :root {
   color-scheme: dark;
   --bg: #16181a;
+  --bar: rgb(22 24 26 / 0.7);
   --surface: #1d2023;
   --fg: #e3e3e3;
   --muted: #8b93a3;
@@ -23,6 +19,7 @@
   :root {
     color-scheme: light;
     --bg: #f4f4f0;
+    --bar: rgb(244 244 240 / 0.7);
     --surface: #eaeae4;
     --fg: #16181a;
     --muted: #5d6574;
@@ -58,24 +55,20 @@
 }
 
 @layer components {
-  /* Underlined text link used inside paragraphs. */
   .link {
     @apply text-fg underline decoration-underline decoration-1 underline-offset-[3px] transition-colors hover:decoration-accent;
   }
 
-  /* Small monospace label: tags, dates, metadata keys. */
   .label {
     @apply font-mono text-[11px] uppercase tracking-wider text-muted;
   }
 
-  /* Short handwritten annotation. Never used for essential information. */
   .hand {
     @apply font-hand text-note;
     font-size: 1.25rem;
     line-height: 1.1;
   }
 
-  /* Long-form text on project and article pages. */
   .prose {
     @apply text-[15px] leading-[1.75];
   }
