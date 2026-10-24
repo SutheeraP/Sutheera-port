@@ -27,7 +27,7 @@ export default function Home() {
           <h2 id="intro" className="font-hand text-3xl font-bold leading-none tracking-wider sm:text-4xl">
             Hello
           </h2>
-          <Webring domain={site.domain} className="h-7 w-7 transition-opacity hover:opacity-70 sm:h-8 sm:w-8" />
+          <Webring domain={site.domain} className="h-6 w-6 transition-opacity hover:opacity-70 sm:h-7 sm:w-7" />
         </div>
         <div className="mt-4 space-y-4 text-muted">
           <p>
