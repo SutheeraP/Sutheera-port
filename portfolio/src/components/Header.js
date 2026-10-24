@@ -17,7 +17,7 @@ export default function Header() {
           aria-label={`${site.shortName}, home`}
           className="text-fg transition-colors hover:text-accent"
         >
-          <Signature className="h-10 w-auto" />
+          <Signature className="h-7 w-auto" />
         </Link>
         <nav aria-label="Main">
           <ul className="flex gap-5 text-sm text-muted">

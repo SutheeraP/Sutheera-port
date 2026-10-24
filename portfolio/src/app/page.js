@@ -7,12 +7,12 @@ import { projects } from "@/data/projects";
 import TypingText from "@/components/TypingText";
 import { site } from "@/data/site";
 
-const roles = ["Sutheera", "a software engineer", "an artist"];
+const roles = ["Sutheera", "Software Engineer", "Artist"];
 
 export default function Home() {
   return (
     <>
-      <section className="relative -mt-16 flex min-h-[calc(100svh-4rem)] flex-col justify-center sm:-mt-20">
+      <section className="-mt-16 flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center sm:-mt-20">
         <h1 className="sr-only">Hi, I'm {site.name}, a software engineer and an artist</h1>
         <div aria-hidden="true">
           <p className="font-medium text-accent">Hi, I'm</p>
@@ -20,18 +20,9 @@ export default function Home() {
             <TypingText phrases={roles} />
           </p>
         </div>
-        <a
-          href="#intro"
-          aria-label="Scroll to introduction"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted transition-colors hover:text-fg motion-safe:animate-bounce"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
-            <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </a>
       </section>
 
-      <section aria-labelledby="intro" className="scroll-mt-24 pt-8">
+      <section aria-labelledby="intro" className="pt-8">
         <PlayfulHello id="intro" />
         <div className="mt-10 space-y-4 text-muted">
           <p>
