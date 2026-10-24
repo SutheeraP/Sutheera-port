@@ -7,6 +7,7 @@ module.exports = {
       // share the same class names.
       colors: {
         bg: "var(--bg)",
+        bar: "var(--bar)",
         surface: "var(--surface)",
         fg: "var(--fg)",
         muted: "var(--muted)",
@@ -19,6 +20,14 @@ module.exports = {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
         hand: ["var(--font-hand)", "cursive"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "monospace"],
+      },
+      keyframes: {
+        blink: {
+          "50%": { opacity: "0" },
+        },
+      },
+      animation: {
+        blink: "blink 1s step-end infinite",
       },
       maxWidth: {
         page: "40rem",

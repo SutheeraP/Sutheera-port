@@ -10,6 +10,7 @@
 :root {
   color-scheme: dark;
   --bg: #16181a;
+  --bar: rgb(22 24 26 / 0.7);
   --surface: #1d2023;
   --fg: #e3e3e3;
   --muted: #8b93a3;
@@ -23,6 +24,7 @@
   :root {
     color-scheme: light;
     --bg: #f4f4f0;
+    --bar: rgb(244 244 240 / 0.7);
     --surface: #eaeae4;
     --fg: #16181a;
     --muted: #5d6574;
@@ -36,6 +38,7 @@
 @layer base {
   html {
     background: var(--bg);
+    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
   }
 

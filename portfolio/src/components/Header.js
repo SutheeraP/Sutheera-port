@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Signature from "@/components/Signature";
 import { site } from "@/data/site";
 
 const nav = [
@@ -9,21 +10,27 @@ const nav = [
 
 export default function Header() {
   return (
-    <header className="mx-auto flex max-w-page items-baseline justify-between gap-4 px-5 pt-10 sm:pt-14">
-      <Link href="/" className="font-medium text-fg transition-colors hover:text-accent">
-        {site.shortName}
-      </Link>
-      <nav aria-label="Main">
-        <ul className="flex gap-5 text-sm text-muted">
-          {nav.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href} className="transition-colors hover:text-fg">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <header className="sticky top-0 z-20 bg-bar backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-page items-center justify-between gap-4 px-5">
+        <Link
+          href="/"
+          aria-label={`${site.shortName}, home`}
+          className="text-fg transition-colors hover:text-accent"
+        >
+          <Signature className="h-10 w-auto" />
+        </Link>
+        <nav aria-label="Main">
+          <ul className="flex gap-5 text-sm text-muted">
+            {nav.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="transition-colors hover:text-fg">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
