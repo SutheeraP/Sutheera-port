@@ -13,7 +13,7 @@ export default function PlayfulHello({ id }) {
     <h2
       id={id}
       aria-label="Hello"
-      className="flex font-hand text-5xl font-bold leading-none text-accent sm:text-6xl"
+      className="flex gap-1 font-hand text-4xl font-bold leading-none text-accent sm:gap-1.5 sm:text-5xl"
     >
       {letters.map(({ letter, className }, index) => (
         <span key={index} aria-hidden="true" className={`inline-block ${className}`}>
