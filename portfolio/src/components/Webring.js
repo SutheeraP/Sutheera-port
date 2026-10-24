@@ -2,6 +2,8 @@ export default function Webring({ domain, className }) {
   return (
     <a
       href={`https://webring.wonderful.software#${domain}`}
+      target="_blank"
+      rel="noopener noreferrer"
       title="วงแหวนเว็บ"
       aria-label="วงแหวนเว็บ"
       className={className}
