@@ -12,7 +12,7 @@ const description =
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: site.name,
+    default: site.shortName,
     template: `%s · ${site.shortName}`,
   },
   description,
